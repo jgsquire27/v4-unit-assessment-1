@@ -1,0 +1,75 @@
+body{
+   margin: 0px;
+   padding: 0px;
+}
+   .salmon-box{
+      background-color: salmon;
+      width: 100vw;
+      height: 175px;
+      padding-top: 120px;
+      padding-left: 20px;
+      border-bottom: 3px black solid;
+   }
+      .yeet{
+         display: inline-block;
+         font-size: 55px;
+         padding-left: 10 px
+      }
+      h2{
+         display: inline-block;
+      }
+      .home{
+         margin-left: 55px;
+         font-size: 35px;
+      }
+      .about{
+         margin-left: 70px;
+         font-size: 35px;
+      }
+      .logout{
+         margin-left: 70px;
+         font-size: 35px;
+      }
+   .top-bordered-box{
+      border: black;
+      border-style: dotted;
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      height: 500px;
+      padding: 10px;
+   }
+   .about-1{
+      font-size: 30px;
+      font-weight: bolder;
+   }
+   .html5{
+      float: left;
+      height: 220px;
+      width: 220px;
+   }
+   .html-text{
+      font-size: 30px;
+   }
+   .bottom-bordered-box{
+      border: black;
+      border-style: dotted;
+      margin-top: 10px;
+      margin-left: 10px;
+      margin-right: 10px;
+      height: 700px;
+      padding: 10px;
+   }
+   .about-2{
+      font-size: 30px;
+      margin-bottom: 40px;
+   }
+   .css3{
+      float: right;
+      height: 220px;
+      width: 220px;
+   }
+   .css-text{
+      display:inline;
+      font-size: 30px;
+   }   
