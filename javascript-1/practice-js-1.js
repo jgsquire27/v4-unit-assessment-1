@@ -32,7 +32,11 @@ function sum(num1, num2){
 */
 
 function trueOrFalse(data){
-  
+  if(data){
+    return true
+  } else{ 
+    return false
+  }
 }
 
 //////////////////PROBLEM 6////////////////////
@@ -44,7 +48,11 @@ function trueOrFalse(data){
 */
 
 function oddChecker(num){
-
+if(num % 2 === 0){
+  return 'the number is even'
+} else {
+  return 'the number is odd'
+}
 }
 
 
@@ -56,7 +64,8 @@ function oddChecker(num){
 */
 
 function iLove(name, love){
-  
+  const str = name + ' loves ' + love;
+  return str
 }
 
 
@@ -80,7 +89,7 @@ colorCopy.push('purple')
 
 const numbers = [1, 2, 3, 4, 5]
 
-middleNums = []
+const middleNums = numbers.slice(1,numbers.length - 1)  
 
 //////////////////PROBLEM 11////////////////////
 /*
@@ -96,7 +105,16 @@ middleNums = []
   For example: 'Hello! My name is Joseph and I live in Utah"
 */
 
-//CODE HERE
+let me = {
+  firstName: 'Jon',
+  state: 'Utah',
+  age: 21, 
+  greeter: function() {
+    return 'Hello! My name is ' + this.firstName + ' and I live in ' + this.state
+  }
+}
+
+//'Hello! My name is 'firstName' and i live in 'state'
 
 //////////////////PROBLEM 12////////////////////
 /* 
@@ -111,7 +129,18 @@ middleNums = []
   Return the answers array inside of the function.
 */
 
-// CODE HERE
+function bigOrSmall(arr){
+  let answers = []
+  for(let i = 0; i < arr.length; i++){
+   const num = arr[i]
+    if(num > 100){
+      answers.push('big')
+    } else{
+      answers.push('small')
+    }
+  }
+  return answers
+}
 
 //////////////////PROBLEM 13////////////////////
 /* 
@@ -123,7 +152,13 @@ middleNums = []
   Finally, return the 'reversed' array variable.
 */
 
-//CODE HERE
+function arrayReverser(arr){
+  let reversed = []
+  for(let i = arr.length - 1; i >= 0; i--){
+    reversed.push(arr[i])
+  }
+  return reversed
+}
 
 //////////////////PROBLEM 14////////////////////
 
@@ -149,16 +184,16 @@ function secondFunction() {
 */
 
 //This array should contain the variable names (as strings) accessible in the global scope.
-let globalScope = ['global', 'inner', 'outer', 'functional']
+let globalScope = ['global']
 
 //This array should contain the variable names (as strings) accessible in the firstFunction function.
-let firstFunctionScope = ['global', 'inner', 'outer', 'functional']
+let firstFunctionScope = ['global', 'outer']
 
 //This array should contain the variable names (as strings) accessible in the innerFunction function.
-let innerFunctionScope = ['global', 'inner', 'outer', 'functional']
+let innerFunctionScope = ['global', 'inner', 'outer']
 
 //This array should contain the variable names (as strings) accessible in the secondFunction function.
-let secondFunctionScope = ['global', 'inner', 'outer', 'functional']
+let secondFunctionScope = ['global', 'functional']
 
 
 //////////////////PROBLEM 15////////////////////
@@ -167,7 +202,9 @@ let secondFunctionScope = ['global', 'inner', 'outer', 'functional']
   Invoke the callback passing the first item in the array as an argument.
 */
 
-//CODE HERE
+function firstItem(array, callback){
+  callback(array[0])
+}
 
 //////////////////PROBLEM 16////////////////////
 /* 
@@ -177,7 +214,13 @@ let secondFunctionScope = ['global', 'inner', 'outer', 'functional']
   Otherwise, invoke the callback passing in false.
 */
 
-//CODE HERE
+function isItBob(object, callback){
+  if(object.name === 'Bob'){
+    callback(true)
+  } else{
+    callback(false)
+  }
+}
 
 //////////////////PROBLEM 17////////////////////
 /*
@@ -186,7 +229,12 @@ let secondFunctionScope = ['global', 'inner', 'outer', 'functional']
   Then invoke the callback, passing in the doubled array.
 */
 
-//CODE HERE
+function giveMeDoubles(arr, callback){
+  for(let i = 0; i < arr.length; i++){
+    arr[i] = arr[i] * 2
+  }
+  callback(arr)
+}
 
 //////////////////PROBLEM 18////////////////////
 /*
@@ -213,4 +261,16 @@ let secondFunctionScope = ['global', 'inner', 'outer', 'functional']
   }
 */
 
-//CODE HERE
+function carFactory(make, model, year){
+  let car = {
+    make:make,
+    model:model,
+    year:year,
+  }
+  if(car.year > 2018){
+    car.isNew = true 
+  } else{
+    car.isNew = false
+  }
+  return car
+}
