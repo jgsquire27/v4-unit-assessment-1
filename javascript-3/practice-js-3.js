@@ -6,7 +6,7 @@ let groceries = ['chicken', 'eggs', 'toilet paper']
 //////////////////STEP 2////////////////////
 /* Create a variable called 'yourName' that is assigned the value of your name as a string. */
 
-let yourName = 'Jon'
+let yourName = 'Jon '
 
 //////////////////STEP 3////////////////////
 /*
@@ -16,7 +16,9 @@ let yourName = 'Jon'
     the function would return 'Joseph's Grocery List'.
 */
 
-//CODE HERE
+function setGroceryListTitle(x){
+    return yourname + 'grocery list';
+}
 
 //////////////////STEP 4////////////////////
 /* 
@@ -26,7 +28,12 @@ let yourName = 'Jon'
     that takes care of some of the work for getting your page to display correctly.
 */
 
-//CODE HERE
+function addItem(item){
+    groceries.push[item];
+    displayData()
+}
+
+
 
 //////////////////STEP 5////////////////////
 /*
