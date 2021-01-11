@@ -17,7 +17,7 @@ let yourName = 'Jon '
 */
 
 function setGroceryListTitle(x){
-    return yourname + 'grocery list';
+    return x + ' Grocery List';
 }
 
 //////////////////STEP 4////////////////////
@@ -34,7 +34,6 @@ function addItem(item){
 }
 
 
-
 //////////////////STEP 5////////////////////
 /*
     Create a function called 'removeItem' that takes in one parameter called 'index'. 
@@ -43,7 +42,10 @@ function addItem(item){
     Then, invoke the displayData() function inside of your removeItem function.
 */
 
-//CODE HERE
+function removeItem(index){
+    groceries.splice(index, index + 1);
+    displayData()
+}
 
 //////////////////STEP 6////////////////////
 /*
